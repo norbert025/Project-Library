@@ -1,15 +1,19 @@
+
+
+
+// Finds author by id
 function findAuthorById(authors, id) {
  return authors.find((author) => author.id === id) 
 }
 
 
-
+// Finds book by id
 function findBookById(books, id) {
   return books.find((book) => book.id ===id);
 }
 
 
-
+// Partitions books by borrowed status
 function partitionBooksByBorrowedStatus(books) {
   const loanedBook = [];
   const notLoanedBooks = [];
@@ -28,7 +32,7 @@ function partitionBooksByBorrowedStatus(books) {
 
 
 
-
+// Gets borrowers for a book
 function getBorrowersForBook(book, accounts) {
   const borrowed = book.borrows;
   const result = borrowed.map((borrow) => {
